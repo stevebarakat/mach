@@ -32,6 +32,10 @@ A quick-reference guide to building a "best-of-breed" MACH stack for e-commerce 
 - **The Frontend App** — Next.js orchestrates all API calls into a single user experience
 - **Integration Tools** — Zapier or Make sync data between backend services
 
+## Further Reading
+
+- [macharchitecture.com](https://macharchitecture.com) — in-depth articles on MACH principles, composable enterprise architecture, and comparisons with monolithic approaches
+
 ## Getting Started
 
 ```bash
