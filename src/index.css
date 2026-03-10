@@ -10,7 +10,7 @@
 
 :root {
   --bg: hsl(60, 19%, 95%);
-  --surface: hsl(0, 0%, 100%);
+  --surface: hsl(0, 0%, 95%);
   --surface-2: hsl(60, 15%, 92%);
   --border: hsl(60, 10%, 85%);
   --border-subtle: hsl(60, 12%, 90%);
