@@ -16,6 +16,7 @@ export const services = [
       "Sanity",
       "Strapi",
       "Storyblok",
+      "DatoCMS",
       "WordPress",
     ],
     primaryExample: "Contentful",
@@ -72,7 +73,7 @@ export const services = [
   },
   {
     function: "Email Delivery",
-    category: "Email Service Provider (ESP)",
+    category: "Transactional Email Service (ESP)",
     examples: ["SendGrid", "Mailgun", "Postmark", "AWS SES"],
     primaryExample: "SendGrid",
     reason:
@@ -117,6 +118,7 @@ export const serviceUrls = {
   Sanity: "https://www.sanity.io",
   Strapi: "https://strapi.io",
   Storyblok: "https://www.storyblok.com",
+  DatoCMS: "https://www.datocms.com",
   WordPress: "https://wordpress.org",
   Shopify: "https://www.shopify.com",
   BigCommerce: "https://www.bigcommerce.com",
