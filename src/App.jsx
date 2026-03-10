@@ -94,63 +94,89 @@ const glueItems = [
   },
 ]
 
-function ServiceRow({ service }) {
+const machPills = [
+  { letter: 'M', word: 'Microservices' },
+  { letter: 'A', word: 'API-first' },
+  { letter: 'C', word: 'Cloud-native' },
+  { letter: 'H', word: 'Headless' },
+]
+
+function ServiceRow({ service, index }) {
   return (
-    <tr>
-      <td>
-        <strong>{service.function}</strong>
+    <tr className="service-row" style={{ '--i': index }}>
+      <td className="function-cell">
+        <span className="function-label">{service.function}</span>
       </td>
-      <td>{service.category}</td>
-      <td>
-        {service.examples.map((ex) => (
-          <span key={ex}>
-            {ex === service.primaryExample ? <strong>{ex}</strong> : ex}
-            {ex !== service.examples[service.examples.length - 1] ? ', ' : ''}
-          </span>
-        ))}
+      <td className="category-cell">{service.category}</td>
+      <td className="examples-cell">
+        <div className="example-badges">
+          {service.examples.map((ex) => (
+            <span
+              key={ex}
+              className={`example-badge${ex === service.primaryExample ? ' primary' : ''}`}
+            >
+              {ex}
+            </span>
+          ))}
+        </div>
       </td>
-      <td>{service.reason}</td>
+      <td className="reason-cell">{service.reason}</td>
     </tr>
   )
 }
 
 export default function App() {
   return (
-    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>MACH Architecture Services List</h1>
-      <p>
-        The following list outlines the services needed to build a robust,
-        "best-of-breed" MACH (Microservices, API-first, Cloud-native, Headless)
-        architecture for a typical e-commerce and content-driven business. The
-        philosophy here is to use a specialized, API-first service for each major
-        business function:
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Service Category</th>
-            <th>Example Services</th>
-            <th>Why they are used in a MACH stack</th>
-          </tr>
-        </thead>
-        <tbody>
-          {services.map((service) => (
-            <ServiceRow key={service.function} service={service} />
+    <div className="app">
+      <header className="header">
+        <div className="header-eyebrow">Reference Guide</div>
+        <h1 className="header-title">MACH Architecture</h1>
+        <p className="header-subtitle">
+          Services for building a "best-of-breed" stack for e-commerce and content-driven
+          businesses. One specialized, API-first service per business function.
+        </p>
+        <div className="mach-pills">
+          {machPills.map(({ letter, word }) => (
+            <div key={letter} className="mach-pill">
+              <span className="mach-pill-letter">{letter}</span>
+              <span>{word}</span>
+            </div>
           ))}
-        </tbody>
-      </table>
+        </div>
+      </header>
 
-      <h2>Summary of the MACH Stack "Glue"</h2>
-      <p>The services above are separate. The "glue" that unifies them is:</p>
-      <ul>
-        {glueItems.map((item) => (
-          <li key={item.label}>
-            <strong>{item.label}:</strong> {item.description}
-          </li>
-        ))}
-      </ul>
+      <main>
+        <div className="table-wrapper">
+          <table className="services-table">
+            <thead>
+              <tr>
+                <th>Function</th>
+                <th>Service Category</th>
+                <th>Example Services</th>
+                <th>Why MACH</th>
+              </tr>
+            </thead>
+            <tbody>
+              {services.map((service, i) => (
+                <ServiceRow key={service.function} service={service} index={i} />
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <section className="glue-section">
+          <h2 className="glue-title">The Stack "Glue"</h2>
+          <p className="glue-intro">These services are decoupled. What unifies them:</p>
+          <div className="glue-cards">
+            {glueItems.map((item) => (
+              <div key={item.label} className="glue-card">
+                <div className="glue-card-label">{item.label}</div>
+                <div className="glue-card-desc">{item.description}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   )
 }

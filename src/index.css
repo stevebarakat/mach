@@ -1,27 +1,314 @@
-table {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f4f4ef;
+  --surface: #ffffff;
+  --surface-2: #eeeee8;
+  --border: #dcdcd4;
+  --border-subtle: #e8e8e2;
+  --text: #111116;
+  --text-muted: #6a6a7a;
+  --accent: #4a7c00;
+  --accent-soft: rgba(74, 124, 0, 0.07);
+  --accent-border: rgba(74, 124, 0, 0.2);
+}
+
+html,
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── APP ── */
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 7rem;
+}
+
+/* ── HEADER ── */
+
+.header {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3.5rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+.header-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.header-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.header-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.mach-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mach-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.7rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.mach-pill-letter {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--accent);
+}
+
+/* ── TABLE ── */
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 4rem;
+  animation: fadeUp 0.5s 0.08s ease both;
+}
+
+.services-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
 }
 
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 10px;
+.services-table thead tr {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.services-table th {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
   text-align: left;
+  white-space: nowrap;
+}
+
+.service-row {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.15s ease;
+  animation: rowIn 0.35s calc(var(--i) * 0.035s + 0.15s) ease both;
+}
+
+.service-row:last-child {
+  border-bottom: none;
+}
+
+.service-row:hover {
+  background: var(--surface-2);
+}
+
+.service-row:hover .function-label {
+  color: var(--accent);
+}
+
+.services-table td {
+  padding: 1rem 1.25rem;
   vertical-align: top;
+  font-size: 0.875rem;
 }
 
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
+.function-cell {
+  width: 140px;
+  white-space: nowrap;
 }
 
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
+.function-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--text);
+  transition: color 0.15s;
 }
 
-li {
-  margin-bottom: 5px;
+.category-cell {
+  color: var(--text-muted);
+  font-size: 0.83rem;
+  min-width: 200px;
+}
+
+.examples-cell {
+  min-width: 230px;
+}
+
+.example-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.example-badge {
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+  font-size: 0.73rem;
+  font-weight: 400;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.example-badge.primary {
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.reason-cell {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── GLUE ── */
+
+.glue-section {
+  animation: fadeUp 0.5s 0.18s ease both;
+}
+
+.glue-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.glue-intro {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.glue-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1rem;
+}
+
+.glue-card {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.glue-card:hover {
+  border-color: var(--accent-border);
+  background: var(--surface-2);
+}
+
+.glue-card-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.glue-card-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ── ANIMATIONS ── */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rowIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── SCROLLBAR ── */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c4c4bc;
 }
