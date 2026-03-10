@@ -82,7 +82,7 @@ export const services = [
   {
     function: "Email Marketing",
     category: "Email Service Provider (ESP) / Marketing Automation Platform",
-    examples: ["Mailchimp", "SendGrid Marketing Campaigns", "Klaviyo", "Brevo"],
+    examples: ["Mailchimp", "Klaviyo", "Brevo", "SendGrid Marketing Campaigns"],
     primaryExample: "Mailchimp",
     reason:
       "Handles audience management, email campaigns, and automated customer messaging via APIs, making it easy to integrate as a decoupled service in a MACH architecture.",
