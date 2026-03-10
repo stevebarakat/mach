@@ -9,16 +9,29 @@
 }
 
 :root {
-  --bg: #f4f4ef;
-  --surface: #ffffff;
-  --surface-2: #eeeee8;
-  --border: #dcdcd4;
-  --border-subtle: #e8e8e2;
-  --text: #111116;
-  --text-muted: #3f3f52;
-  --accent: #4a7c00;
-  --accent-soft: rgba(74, 124, 0, 0.07);
-  --accent-border: rgba(74, 124, 0, 0.2);
+  --bg: hsl(60, 19%, 95%);
+  --surface: hsl(0, 0%, 100%);
+  --surface-2: hsl(60, 15%, 92%);
+  --border: hsl(60, 10%, 85%);
+  --border-subtle: hsl(60, 12%, 90%);
+  --text: hsl(240, 13%, 8%);
+  --text-muted: hsl(240, 13%, 28%);
+  --accent: hsl(84, 100%, 24%);
+  --accent-soft: hsla(84, 100%, 24%, 0.07);
+  --accent-border: hsla(84, 100%, 24%, 0.2);
+}
+
+[data-theme="dark"] {
+  --bg: hsl(240, 20%, 4%);
+  --surface: hsl(240, 17%, 7%);
+  --surface-2: hsl(240, 17%, 9%);
+  --border: hsl(240, 18%, 28%);
+  --border-subtle: hsl(240, 19%, 21%);
+  --text: hsl(240, 31%, 95%);
+  --text-muted: hsl(240, 18%, 74%);
+  --accent: hsl(80, 100%, 67%);
+  --accent-soft: hsla(80, 100%, 67%, 0.08);
+  --accent-border: hsla(80, 100%, 67%, 0.22);
 }
 
 html,
@@ -26,7 +39,9 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  /* font-size: 1.2rem; */
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 body {
@@ -44,13 +59,51 @@ body {
   padding: 0 2rem 7rem;
 }
 
+/* ── THEME TOGGLE ── */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.25s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
 /* ── HEADER ── */
 
 .header {
   padding: 5rem 0 4rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 3.5rem;
   animation: fadeUp 0.5s ease both;
+  position: relative;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
 }
 
 .header-eyebrow {
@@ -59,7 +112,6 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1.25rem;
 }
 
 .header-title {
@@ -311,5 +363,5 @@ body {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c4c4bc;
+  background: hsl(60, 6%, 75%);
 }
