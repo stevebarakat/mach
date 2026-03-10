@@ -2,7 +2,7 @@ export const services = [
   {
     function: "Frontend",
     category: "Headless Application Framework",
-    examples: ["Next.js", "Astro", "React Router Framework", "Tanstack Start"],
+    examples: ["Next.js", "Astro", "Tanstack Start", "React Router Framework"],
     primaryExample: "Next.js",
     reason:
       "Builds a decoupled frontend that consumes APIs from CMS, commerce, search, and other backend services, while optimizing for performance, SEO, and developer control.",
