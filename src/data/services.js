@@ -25,7 +25,7 @@ export const services = [
   {
     function: "E-commerce",
     category: "Composable Commerce Platform",
-    examples: ["Shopify", "BigCommerce", "commercetools"],
+    examples: ["Shopify", "BigCommerce", "Commercetools", "Medusa"],
     primaryExample: "Shopify",
     reason:
       "Specialized platforms handling product data, inventory, and transactions via robust APIs.",
@@ -104,6 +104,43 @@ export const glueItems = [
       "Tools like Zapier or Make may be used to sync data between the backend services (e.g., syncing a Typeform submission to HubSpot CRM).",
   },
 ];
+
+export const serviceUrls = {
+  "Next.js": "https://nextjs.org",
+  "Gatsby": "https://www.gatsbyjs.com",
+  "Nuxt.js": "https://nuxt.com",
+  "Contentful": "https://www.contentful.com",
+  "Contentstack": "https://www.contentstack.com",
+  "Sanity": "https://www.sanity.io",
+  "Strapi": "https://strapi.io",
+  "Storyblok": "https://www.storyblok.com",
+  "WordPress": "https://wordpress.org",
+  "Shopify": "https://www.shopify.com",
+  "BigCommerce": "https://www.bigcommerce.com",
+  "Commercetools": "https://commercetools.com",
+  "Medusa": "https://medusajs.com",
+  "Eventbrite": "https://www.eventbrite.com",
+  "Ticketmaster API": "https://developer.ticketmaster.com",
+  "HubSpot": "https://www.hubspot.com",
+  "Salesforce": "https://www.salesforce.com",
+  "ActiveCampaign": "https://www.activecampaign.com",
+  "Algolia": "https://www.algolia.com",
+  "Elastic Cloud": "https://www.elastic.co/cloud",
+  "Weglot": "https://www.weglot.com",
+  "Lokalise": "https://lokalise.com",
+  "Phrase": "https://phrase.com",
+  "Typeform": "https://www.typeform.com",
+  "JotForm": "https://www.jotform.com",
+  "Formspree": "https://formspree.io",
+  "SendGrid": "https://sendgrid.com",
+  "Mailgun": "https://www.mailgun.com",
+  "Postmark": "https://postmarkapp.com",
+  "AWS SES": "https://aws.amazon.com/ses",
+  "Mailchimp": "https://mailchimp.com",
+  "SendGrid Marketing Campaigns": "https://sendgrid.com/solutions/email-marketing/",
+  "Klaviyo": "https://www.klaviyo.com",
+  "Brevo": "https://www.brevo.com",
+}
 
 export const machPills = [
   { letter: "M", word: "Microservices" },

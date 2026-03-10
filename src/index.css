@@ -263,6 +263,27 @@ body {
   font-weight: 500;
 }
 
+a.example-badge {
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+a.example-badge:hover {
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+a.example-badge.primary:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .reason-cell {
   font-size: 0.95rem;
   color: var(--text-muted);
