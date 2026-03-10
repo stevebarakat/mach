@@ -13,18 +13,18 @@ A quick-reference guide to building a "best-of-breed" MACH stack for e-commerce 
 
 ## Services Reference
 
-| Function | Category | Primary Example |
-|---|---|---|
-| Frontend | Headless Application Framework | Next.js |
-| Content | Headless CMS | Contentful |
-| E-commerce | Composable Commerce Platform | Shopify |
-| Events | Event Management Platform | Eventbrite |
-| Email Delivery | Email Service Provider (ESP) | SendGrid |
-| Email Marketing | Marketing Automation Platform | Mailchimp |
-| CRM/Automation | CRM & Automation Platform | HubSpot |
-| Search | Search-as-a-Service | Algolia |
-| Translations | Translation Management System | Weglot |
-| Forms | Forms-as-a-Service | Typeform |
+| Function        | Category                       | Primary Example |
+| --------------- | ------------------------------ | --------------- |
+| Frontend        | Headless Application Framework | Next.js         |
+| Content         | Headless CMS                   | Contentful      |
+| E-commerce      | Composable Commerce Platform   | Shopify         |
+| Events          | Event Management Platform      | Eventbrite      |
+| Email Delivery  | Email Service Provider (ESP)   | SendGrid        |
+| Email Marketing | Marketing Automation Platform  | Mailchimp       |
+| CRM/Automation  | CRM & Automation Platform      | HubSpot         |
+| Search          | Search-as-a-Service            | Algolia         |
+| Translations    | Translation Management System  | Weglot          |
+| Forms           | Forms-as-a-Service             | Typeform        |
 
 ## The "Glue"
 
@@ -34,7 +34,7 @@ A quick-reference guide to building a "best-of-breed" MACH stack for e-commerce 
 
 ## Further Reading
 
-- [macharchitecture.com](https://macharchitecture.com) — in-depth articles on MACH principles, composable enterprise architecture, and comparisons with monolithic approaches
+[macharchitecture.com](https://macharchitecture.com) — in-depth articles on MACH principles, composable enterprise architecture, and comparisons with monolithic approaches
 
 ## Getting Started
 
