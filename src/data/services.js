@@ -10,7 +10,14 @@ export const services = [
   {
     function: "Content",
     category: "Headless CMS",
-    examples: ["Contentful", "Contentstack", "Sanity", "WordPress"],
+    examples: [
+      "Contentful",
+      "Contentstack",
+      "Sanity",
+      "Strapi",
+      "Storyblok",
+      "WordPress",
+    ],
     primaryExample: "Contentful",
     reason:
       "Dedicated, API-first platforms built purely for content management and delivery. (WordPress can also be used as a content repository).",
