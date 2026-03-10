@@ -10,7 +10,7 @@ const services = [
   {
     function: 'Content',
     category: 'Headless CMS',
-    examples: ['Contentful', 'Contentstack', 'Sanity'],
+    examples: ['Contentful', 'Contentstack', 'Sanity', 'WordPress'],
     primaryExample: 'Contentful',
     reason:
       'Dedicated, API-first platforms built purely for content management and delivery. (WordPress can also be used as a content repository).',
@@ -66,6 +66,14 @@ const services = [
     primaryExample: 'Typeform',
     reason:
       'Dedicated services for building and managing forms, using APIs for submission handling.',
+  },
+  {
+    function: 'Email Marketing',
+    category: 'Email Service Provider (ESP) / Marketing Automation Platform',
+    examples: ['Mailchimp', 'SendGrid Marketing Campaigns', 'Klaviyo', 'Brevo'],
+    primaryExample: 'Mailchimp',
+    reason:
+      'Handles audience management, email campaigns, and automated customer messaging via APIs, making it easy to integrate as a decoupled service in a MACH architecture.',
   },
 ]
 
