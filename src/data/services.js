@@ -57,7 +57,7 @@ export const services = [
   },
   {
     function: "Translations",
-    category: "Translation Management System (TMS)",
+    category: "Translation & Localization Platform",
     examples: ["Weglot", "Lokalise", "Phrase"],
     primaryExample: "Weglot",
     reason:
@@ -74,7 +74,7 @@ export const services = [
   {
     function: "Email Delivery",
     category: "Transactional Email Service (ESP)",
-    examples: ["SendGrid", "Mailgun", "Postmark", "AWS SES"],
+    examples: ["SendGrid", "Mailgun", "Postmark", "AWS SES", "Resend"],
     primaryExample: "SendGrid",
     reason:
       "Ensures reliable, high-volume delivery of transactional and marketing emails via API.",
@@ -141,6 +141,7 @@ export const serviceUrls = {
   Mailgun: "https://www.mailgun.com",
   Postmark: "https://postmarkapp.com",
   "AWS SES": "https://aws.amazon.com/ses",
+  Resend: "https://resend.com",
   Mailchimp: "https://mailchimp.com",
   "SendGrid Marketing Campaigns":
     "https://sendgrid.com/solutions/email-marketing/",
